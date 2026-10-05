@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Shoes</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #111;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .search {
+      background: #f5f5f5;
+      border-radius: 20px;
+      padding: 8px 15px;
+      color: #777;
+      width: 130px;
+    }
+
+    /* PROMO */
+    .promo {
+      text-align: center;
+      background: #f5f5f5;
+      padding: 8px;
+      font-size: 11px;
+      line-height: 17px;
+    }
+
+    /* TITLE */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 22px;
+    }
+
+    .top h2 {
+      font-size: 20px;
+    }
+
+    .tools {
+      display: flex;
+      gap: 25px;
+      font-size: 13px;
+    }
+
+    /* MAIN */
+    .main {
+      display: flex;
+      padding: 10px 22px;
+      gap: 25px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 155px;
+      flex-shrink: 0;
+    }
+
+    .sidebar p {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .reset {
+      width: 140px;
+      padding: 7px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      background: white;
+      color: #aaa;
+    }
+
+    .size {
+      margin-top: 18px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* PRODUCTS */
+    .products {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .product-image {
+      height: 265px;
+      background: #f4f4f4;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-image img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+    }
+
+    .heart {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      background: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .product-info {
+      padding-top: 10px;
+    }
+
+    .product-name {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .description {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .colors {
+      margin-bottom: 5px;
+    }
+
+    .circle {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border-radius: 50%;
+      background: #111;
+      margin-right: 4px;
+    }
+
+    .circle.gray {
+      background: #999;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .menu {
+        display: none;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .product-image {
+        height: 200px;
+      }
+
+      .tools {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">✓</div>
+
+    <ul class="menu">
+      <li>Sale</li>
+      <li>New & Featured</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>Kids</li>
+      <li>Jordan</li>   
+    </ul>
+
+    <div class="right">
+      <div class="search">⌕  Search</div>
+    </div>
+
+  </nav>
+
+ 
+
+  <!-- TITLE -->
+  <div class="top">
+    <h2>Men's Shoes (803)</h2>
+
+    <div class="tools">
+      <span>Hide Filters </span>
+      <span>Sort By⌄</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <p>Running</p>
+      <p>Jordan</p>
+      <p>Sandal, Sliders and<br>Flipflop</p>
+      <p>Tennis</p>
+      <p>Lifestyle</p>
+      <p>Basketball</p>
+      <p>Training and Gym</p>
+      <p>Skateboarding</p>
+      <p>Football</p>
+      <p>Walking</p>
+      <p>Athletics</p>
+
+      <button class="reset">Reset</button>
+
+
+
+    </aside>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+
+      <!-- PRODUCT 1 -->
+      <div class="product">
+
+        <div class="product-image">
+
+          <img
+            src=""
+            alt="Air Jordan 1">
+        </div>
+
+        <div class="product-info">
+          <div class="product-name">Air Jordan 1 Mid SE</div>
+          <div class="description">
+            Nike Air Jordan 1 Mid SE Men's Shoes
+          </div>
+          <div class="price">₹12,295</div>
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product">
+
+        <div class="product-image">
+
+          <img
+            src=""
+            alt="Nike Pegasus Premium">
+        </div>
+
+        <div class="product-info">
+          <div class="product-name">Nike Pegasus Premium</div>
+
+          <div class="description">
+            Men's Road Running Shoes
+          </div>
+
+          <div class="colors">
+            
+          </div>
+
+          <div class="price">₹19,295</div>
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="product">
+
+        <div class="product-image">
+
+          <img
+            src=""
+            alt="Nike Air Max">
+        </div>
+
+        <div class="product-info">
+          <div class="product-name">Nike Air Liquid Max</div>
+
+          <div class="description">
+            Men's Shoes
+          </div>
+
+          <div class="price">₹19,995</div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
